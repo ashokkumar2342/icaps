@@ -67,7 +67,7 @@
 				@php 
 					$oldCart2 = Session::get('cart');
 					$cart2 = new App\Model\Catalog\Cart($oldCart2);
-					if(is_array($_posts)){
+					if(is_array($cart2)){
     					foreach($cart2->items as $itemCart){
     					$sopCart = App\Model\Catalog\SellOnProduct::find($itemCart['sop']);
     					$productCart = App\Model\Catalog\Product::find($itemCart['pid']);
