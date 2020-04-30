@@ -101,7 +101,12 @@
 			            <div class="basket">
 								<i class="glyphicon glyphicon-shopping-cart"></i>
 							</div>
-							<div class="basket-item-count"><span class="count"> {{ count($cart2->items) }}</span></span></div>
+							<div class="basket-item-count"><span class="count"> 
+								@if (is_array($cart2))
+									{{ count($cart2->items) }} 
+								@endif
+								
+							</span></span></div>
 							<div class="total-price-basket">
 								<span class="lbl">cart</span>
 								<span class="total-price">
