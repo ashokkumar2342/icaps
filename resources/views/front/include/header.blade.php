@@ -67,6 +67,7 @@
 				@php 
 					$oldCart2 = Session::get('cart');
 					$cart2 = new App\Model\Catalog\Cart($oldCart2);
+					dd($cart2);
 					if(count($cart2->items)){
     					foreach($cart2->items as $itemCart){
     					$sopCart = App\Model\Catalog\SellOnProduct::find($itemCart['sop']);
