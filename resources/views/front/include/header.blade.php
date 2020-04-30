@@ -66,8 +66,8 @@
 				<div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
 				@php 
 					$oldCart2 = Session::get('cart');
-					$cart2 = new App\Model\Catalog\Cart($oldCart2); 
-					if(count($cart2->items) != 0){
+					$cart2 = new App\Model\Catalog\Cart($oldCart2);
+					if(count($cart2->items) && is_array($_posts)){
     					foreach($cart2->items as $itemCart){
     					$sopCart = App\Model\Catalog\SellOnProduct::find($itemCart['sop']);
     					$productCart = App\Model\Catalog\Product::find($itemCart['pid']);
